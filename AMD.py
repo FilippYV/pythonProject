@@ -13,3 +13,6 @@ class INTEL(Bace_of_Motherboards):
     def out_data(self):
         return f'cpu - {self.cpu} \nprice - {self.price} \nbrand - {self.brand} \n' \
                f'model - {self.model} \ngeneration - {self.generation} \nchip_set - {self.chip_set} \n'
+
+    def return_data(self):
+        return self.cpu, self.price, self.brand, self.model, self.generation, self.chip_set

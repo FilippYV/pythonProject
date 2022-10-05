@@ -5,7 +5,7 @@ class Bace_of_Motherboards(Motherboards):
         self.cpu = cpu
         self.price = price
 
-    def print_b_of_m(self):
+    def print_bace(self):
         print(f'cpu={self.cpu}, price={self.price}')
 
 

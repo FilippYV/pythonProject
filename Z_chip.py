@@ -1,9 +1,8 @@
-from Bace_of_Motherboards import Bace_of_Motherboards
+from Type_of_Motherboards import Motherboards
 
-
-class INTEL(Bace_of_Motherboards):
+class INTEL(Motherboards):
     def __init__(self, cpu, price, brand, model, generation, chip_set):
-        super().__init__(cpu, price)
+        super().__init__(chip_set)
         self.cpu = cpu
         self.price = price
         self.brand = brand

@@ -8,4 +8,6 @@ class Bace_of_Motherboards(Motherboards):
     def print_bace(self):
         print(f'cpu={self.cpu}, price={self.price}')
 
+    def kak(self):
+        pass
 

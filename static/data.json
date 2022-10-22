@@ -1,0 +1,53 @@
+{
+  "bace_of_motherboard": [
+    {
+      "value": "value",
+      "cpu": "cpu"
+    }
+  ],
+  "chipset_of_motherboard": [
+    {
+      "chip": "chip"
+    }
+  ],
+  "z_chipset": [
+    {
+      "chip": "chip"
+    }
+  ],
+  "h_chipset": [
+    {
+      "chip": "chip"
+    }
+  ],
+  "x_chipset": [
+    {
+      "chip": "chip"
+    }
+  ],
+  "b_chipset": [
+    {
+      "chip": "chip"
+    }
+  ],
+  "intel": [
+    {
+      "cpu": "cpu",
+      "chip": "chip",
+      "processor_generation": "processor_generation",
+      "model": "model",
+      "value": "value",
+      "producer": "producer"
+    }
+  ],
+  "amd": [
+    {
+      "cpu": "cpu",
+      "chip": "chip",
+      "processor_generation": "processor_generation",
+      "model": "model",
+      "value": "value",
+      "producer": "producer"
+    }
+  ]
+}

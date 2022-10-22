@@ -1,0 +1,92 @@
+[
+  {
+    "value": 7890,
+    "producer": "MSI",
+    "model": "PRO",
+    "chip": "B",
+    "cpu": "AMD",
+    "processor_generation": "AM4"
+  },
+  {
+    "value": 24999,
+    "producer": "ASUS",
+    "model": "ROG",
+    "chip": "Z",
+    "cpu": "INTEL",
+    "processor_generation": "ADLER LAKE"
+  },
+  {
+    "value": 16796,
+    "producer": "ASUS",
+    "model": "ROG STRIX",
+    "chip": "B",
+    "cpu": "AMD",
+    "processor_generation": "AM4"
+  },
+  {
+    "value": 14900,
+    "producer": "ASUS",
+    "model": "TUF GAMING",
+    "chip": "B",
+    "cpu": "AMD",
+    "processor_generation": "AM4"
+  },
+  {
+    "value": 24740,
+    "producer": "MSI",
+    "model": "TOMAHAWK",
+    "chip": "Z",
+    "cpu": "INTEL",
+    "processor_generation": "ADLER LAKE"
+  },
+  {
+    "value": 13200,
+    "producer": "ASUS",
+    "model": "PRIME",
+    "chip": "Z",
+    "cpu": "INTEL",
+    "processor_generation": "ADLER LAKE"
+  },
+  {
+    "value": 8050,
+    "producer": "ASUS",
+    "model": "PRIME",
+    "chip": "H",
+    "cpu": "INTEL",
+    "processor_generation": "ROCKET LAKE"
+  },
+  {
+    "value": 4630,
+    "producer": "MSI",
+    "model": "PRO",
+    "chip": "H",
+    "cpu": "INTEL",
+    "processor_generation": "ADLER LAKE"
+  },
+  {
+    "value": 4990,
+    "producer": "MSI",
+    "model": "PRO",
+    "chip": "H",
+    "cpu": "INTEL",
+    "processor_generation": "TIGER LAKE"
+  },
+  {
+    "value": 5190,
+    "producer": "MSI",
+    "model": "PRO",
+    "chip": "H",
+    "cpu": "INTEL",
+    "processor_generation": "ROCKET LAKE"
+  },
+  {
+    "value": 52800,
+    "producer": "MSI",
+    "model": "MPG",
+    "chip": "X",
+    "cpu": "AMD",
+    "processor_generation": "AM4"
+  }
+]
+
+

@@ -1,5 +1,6 @@
 from Type_of_Motherboards import Motherboards
 
+
 class INTEL(Motherboards):
     def __init__(self, cpu, price, brand, model, generation, chip_set):
         super().__init__(chip_set)

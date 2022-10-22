@@ -1,5 +1,6 @@
 from Motherboards import Motherboards
 
+
 class Bace_of_Motherboards(Motherboards):
     def __init__(self, chip_set):
         self.chip_set = chip_set
@@ -9,5 +10,3 @@ class Bace_of_Motherboards(Motherboards):
 
     def return_data(self):
         return self.chip_set
-
-

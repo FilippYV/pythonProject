@@ -2,7 +2,6 @@ import json
 
 file_data = "../static/data.json"
 file_bace = "../static/data_bace_of_motherboard.json"
-file_d = "../static/d.json"
 
 
 def save_json(new_data: dict, file_name):

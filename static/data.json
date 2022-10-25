@@ -12,22 +12,42 @@
   ],
   "z_chipset": [
     {
-      "chip": "chip"
+      "cpu": "cpu",
+      "chip": "chip",
+      "processor_generation": "processor_generation",
+      "model": "model",
+      "value": "value",
+      "producer": "producer"
     }
   ],
   "h_chipset": [
     {
-      "chip": "chip"
+      "cpu": "cpu",
+      "chip": "chip",
+      "processor_generation": "processor_generation",
+      "model": "model",
+      "value": "value",
+      "producer": "producer"
     }
   ],
   "x_chipset": [
     {
-      "chip": "chip"
+      "cpu": "cpu",
+      "chip": "chip",
+      "processor_generation": "processor_generation",
+      "model": "model",
+      "value": "value",
+      "producer": "producer"
     }
   ],
   "b_chipset": [
     {
-      "chip": "chip"
+      "cpu": "cpu",
+      "chip": "chip",
+      "processor_generation": "processor_generation",
+      "model": "model",
+      "value": "value",
+      "producer": "producer"
     }
   ],
   "intel": [

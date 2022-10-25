@@ -1,5 +1,7 @@
 import json
 
+import capitalize as capitalize
+
 file_data = "../static/data.json"
 file_bace = "../static/data_bace_of_motherboard.json"
 
@@ -58,7 +60,23 @@ def main():
             z_chipset.append(i)
 
 
-# print(read_json())
+def transformations(data):
+    if data == 'z_chipset':
+        data = ["chip", 'Z']
+    elif data == 'h_chipset':
+        data = ["chip", 'H']
+    elif data == 'x_chipset':
+        data = ["chip", 'Z']
+    elif data == 'b_chipset':
+        data = ["chip", 'B']
+    elif data == 'intel':
+        data = ["cpu", 'INTEL']
+    elif data == 'amd':
+        data = ["cpu", 'AMD']
+    return data
+
+
+# print(read_json())H
 def out():
     print("| bace_of_motherboard | chipset_of_motherboard "
           "|\n| z_chipset | h_chipset | x_chipset | b_chipset |\n| intel | amd |")
@@ -70,43 +88,75 @@ def out():
             print(data[i])
     slot = input("Выберете слот: ")
     print()
-    print(">= | = | <=")
-    sign = input("Знак - ")
+    if slot == "value":
+        print(">= | = | <=")
+        sign = input("Знак - ")
+    else:
+        sign = '='
     meaning = input("Значение - ")
-    print()
+    if level == "chipset_of_motherboard" or level == "bace_of_motherboard":
+        serpch_in_main_class(level, slot, sign, meaning)
+    else:
+        serpch_in_inherited_class(level, slot, sign, meaning)
+
+
+def serpch_in_main_class(level, slot, sign, meaning):
     database = read_json(file_bace)
     if sign == '=':
         for i in database:
-            if i[slot] == meaning:
-                where(i, slot, meaning)
+            if slot == 'value':
+                if i[slot] == int(meaning):
+                    where(i, level, slot, meaning)
+            elif i[slot] == meaning:
+                where(i, level, slot, meaning)
     elif sign == '>=' and slot == 'value':
         for i in database:
             if i[slot] >= int(meaning):
-                where(i, slot, meaning)
+                where(i, level, slot, meaning)
     elif sign == '<=' and slot == 'value':
         for i in database:
             if i[slot] <= int(meaning):
-                where(i, slot, meaning)
+                where(i, level, slot, meaning)
 
 
-def where(data, slot, meaning):
+def serpch_in_inherited_class(level, slot, sign, meaning):
+    level = transformations(level)
+    database = read_json(file_bace)
+    if sign == '=':
+        for i in database:
+            if slot == 'value':
+                if i[level[0]] == level[1] and i[slot] == int(meaning):
+                    where(i, level, slot, meaning)
+            elif i[level[0]] == level[1] and i[slot] == meaning:
+                where(i, level, slot, meaning)
+    elif sign == '>=' and slot == 'value':
+        for i in database:
+            if i[level[0]] == level[1] and i[slot] >= int(meaning):
+                where(i, level, slot, meaning)
+    elif sign == '<=' and slot == 'value':
+        for i in database:
+            if i[level[0]] == level[1] and i[slot] <= int(meaning):
+                where(i, level, slot, meaning)
+
+
+def where(data, level, slot, meaning):
     print()
     for i in data:
         print(i, ' - ', data[i], end=' | ')
     print()
-    base = ["chipset_of_motherboard", "chipset_of_motherboard"]
+    base = []
     if data["cpu"] == 'INTEL':
-        base.append("intel")
+        base.append("База плат -> INTEL")
     if data["cpu"] == 'AMD':
-        base.append("amd")
+        base.append("База плат -> AMD")
     if data["chip"] == 'X':
-        base.append("x_chipset")
+        base.append("Типы плат -> X чипсет")
     if data["chip"] == 'B':
-        base.append("b_chipset")
+        base.append("Типы плат -> B чипсет")
     if data["chip"] == 'Z':
-        base.append("z_chipset")
+        base.append("Типы плат -> Z чипсет")
     if data["chip"] == 'H':
-        base.append("h_chipset")
+        base.append("Типы плат -> H чипсет")
     for i in base:
         print(i, end=' | ')
     print()

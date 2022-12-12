@@ -1,7 +1,5 @@
 import json
 
-import capitalize as capitalize
-
 file_data = "../static/data.json"
 file_bace = "../static/data_bace_of_motherboard.json"
 
